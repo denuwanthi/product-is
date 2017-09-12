@@ -1517,7 +1517,7 @@
     </profiles>
 
     <properties>
-
+        <gpg.skip>true</gpg.skip>
         <!--Carbon Identity Framework Version-->
         <carbon.identity.framework.version>5.8.113</carbon.identity.framework.version>
 
