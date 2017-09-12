@@ -433,6 +433,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <!-- Only realiable if not using -T option of Maven -->
+                    <deployAtEnd>true</deployAtEnd>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
