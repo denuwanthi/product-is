@@ -28,7 +28,7 @@
     <artifactId>identity-server-parent</artifactId>
     <packaging>pom</packaging>
     <description>WSO2 Identity Server</description>
-    <version>5.4.0-SNAPSHOT</version>
+    <version>5.4.0-alpha3</version>
     <name>WSO2 Identity Server</name>
     <url>http://wso2.org/projects/identity</url>
 
@@ -1491,6 +1491,9 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
                         <version>1.0-alpha-3</version>
+                        <configuration>
+                        <skip>true</skip>
+                        </configuration>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
@@ -1749,7 +1752,7 @@
         <url>https://github.com/denuwanthi/product-is.git</url>
         <developerConnection>scm:git:https://github.com/denuwanthi/product-is.git</developerConnection>
         <connection>scm:git:https://github.com/denuwanthi/product-is.git</connection>
-        <tag>HEAD</tag>
+        <tag>5.4.0-alpha3</tag>
     </scm>
 
 
