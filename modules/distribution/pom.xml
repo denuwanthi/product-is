@@ -383,6 +383,7 @@
                             <descriptors>
                                 <descriptor>src/assembly/dist.xml</descriptor>
                             </descriptors>
+                            <appendAssemblyId>false</appendAssemblyId>
                         </configuration>
                     </execution>
                     <execution>
@@ -400,6 +401,7 @@
                                 <descriptor>src/assembly/src.xml</descriptor>
                                 <descriptor>src/assembly/docs.xml</descriptor>
                             </descriptors>
+                            <appendAssemblyId>false</appendAssemblyId>
                         </configuration>
                     </execution>
                 </executions>
