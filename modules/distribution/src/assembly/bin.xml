@@ -17,6 +17,7 @@
  ~ under the License.
  -->
 <assembly>
+    <id>binn</id>
     <formats>
         <format>zip</format>
     </formats>

@@ -1507,7 +1507,7 @@
     </profiles>
 
     <properties>
-
+        <gpg.skip>true</gpg.skip>
         <!--Carbon Identity Framework Version-->
         <carbon.identity.framework.version>5.8.113</carbon.identity.framework.version>
 
@@ -1745,9 +1745,9 @@
     </repositories>
 
     <scm>
-        <url>https://github.com/wso2/product-is.git</url>
-        <developerConnection>scm:git:https://github.com/wso2/product-is.git</developerConnection>
-        <connection>scm:git:https://github.com/wso2/product-is.git</connection>
+        <url>https://github.com/denuwanthi/product-is.git</url>
+        <developerConnection>scm:git:https://github.com/denuwanthi/product-is.git</developerConnection>
+        <connection>scm:git:https://github.com/denuwanthi/product-is.git</connection>
         <tag>HEAD</tag>
     </scm>
 
