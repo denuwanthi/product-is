@@ -384,6 +384,7 @@
                                 <descriptor>src/assembly/dist.xml</descriptor>
                             </descriptors>
                         </configuration>
+                        <appendAssemblyId>false</appendAssemblyId>
                     </execution>
                     <execution>
                         <id>dist</id>
