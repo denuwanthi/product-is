@@ -427,6 +427,7 @@
                 <configuration>
                     <preparationGoals>clean install</preparationGoals>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <releaseProfiles>skipTestsForReleasePerform</releaseProfiles>
                 </configuration>
             </plugin>
             <plugin>
@@ -1444,6 +1445,12 @@
     </dependencyManagement>
 
     <profiles>
+        <profile>
+            <id>skipTestsForReleasePerform</id>
+            <properties>
+                <maven.test.skip>true</maven.test.skip>
+            </properties>
+        </profile>
         <profile>
             <id>jdk14</id>
             <activation>
