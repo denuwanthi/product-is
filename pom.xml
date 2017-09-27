@@ -427,6 +427,7 @@
                 <configuration>
                     <preparationGoals>clean install</preparationGoals>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <releaseProfiles>skipTestsForReleasePerform</releaseProfiles>
                 </configuration>
             </plugin>
             <plugin>
@@ -1445,6 +1446,12 @@
 
     <profiles>
         <profile>
+            <id>skipTestsForReleasePerform</id>
+            <properties>
+                <maven.test.skip>true</maven.test.skip>
+            </properties>
+        </profile>
+        <profile>
             <id>jdk14</id>
             <activation>
                 <jdk>1.4</jdk>
@@ -1503,7 +1510,8 @@
     </profiles>
 
     <properties>
-
+        <gpg.skip>true</gpg.skip>
+        <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
         <!--Carbon Identity Framework Version-->
         <carbon.identity.framework.version>5.8.127</carbon.identity.framework.version>
 
@@ -1741,9 +1749,9 @@
     </repositories>
 
     <scm>
-        <url>https://github.com/wso2/product-is.git</url>
-        <developerConnection>scm:git:https://github.com/wso2/product-is.git</developerConnection>
-        <connection>scm:git:https://github.com/wso2/product-is.git</connection>
+        <url>https://github.com/denuwanthi/product-is.git</url>
+        <developerConnection>scm:git:https://github.com/denuwanthi/product-is.git</developerConnection>
+        <connection>scm:git:https://github.com/denuwanthi/product-is.git</connection>
         <tag>HEAD</tag>
     </scm>
 
