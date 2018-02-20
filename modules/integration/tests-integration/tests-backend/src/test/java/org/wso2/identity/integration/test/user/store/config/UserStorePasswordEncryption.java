@@ -21,7 +21,6 @@ package org.wso2.identity.integration.test.user.store.config;
 import org.apache.axiom.om.OMElement;
 import org.apache.axiom.om.util.AXIOMUtil;
 import org.apache.axiom.om.util.Base64;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
@@ -36,7 +35,6 @@ import org.wso2.carbon.identity.user.store.configuration.stub.dto.PropertyDTO;
 import org.wso2.carbon.identity.user.store.configuration.stub.dto.UserStoreDTO;
 import org.wso2.carbon.integration.common.utils.mgt.ServerConfigurationManager;
 import org.wso2.carbon.user.core.UserStoreException;
-import org.wso2.carbon.utils.CarbonUtils;
 import org.wso2.carbon.utils.FileUtil;
 import org.wso2.identity.integration.common.clients.user.store.config.UserStoreConfigAdminServiceClient;
 import org.wso2.identity.integration.common.utils.ISIntegrationTest;
@@ -67,7 +65,6 @@ import javax.xml.namespace.QName;
  */
 public class UserStorePasswordEncryption extends ISIntegrationTest {
 
-    private static final String userstoreDeploymentDir = CarbonUtils.getCarbonRepository() + "userstores";
     private static Log log = LogFactory.getLog(UserStorePasswordEncryption.class);
     private static final String JDBC_CLASS = "org.wso2.carbon.user.core.jdbc.JDBCUserStoreManager";
     private static final String CARBON_PROPERTIES_FILE_NAME = "carbon.properties";
@@ -78,7 +75,7 @@ public class UserStorePasswordEncryption extends ISIntegrationTest {
     private ServerConfigurationManager serverConfigurationManager;
     private UserStoreConfigUtils userStoreConfigUtils = new UserStoreConfigUtils();
     private String keyStoreFilePath;
-    private String confDir;
+    private String userstoreDeploymentDir;
 
     @BeforeClass(alwaysRun = true)
     public void testInit() throws Exception {
@@ -88,8 +85,8 @@ public class UserStorePasswordEncryption extends ISIntegrationTest {
         keyStoreFilePath =
                 getTestArtifactLocation() + File.separator + "keystores" + File.separator + "products" + File.separator
                         + "wso2carbon.jks";
-        confDir = Utils.getResidentCarbonHome() + File.separator + "repository" + File.separator + "conf"
-                + File.separator;
+        userstoreDeploymentDir = Utils.getResidentCarbonHome() + File.separator + "repository" + File.separator +
+                "deployment" + File.separator + "server" + File.separator + "userstores";
     }
 
     @Test(groups = "wso2.is",
