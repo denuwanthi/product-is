@@ -185,7 +185,13 @@
     <test name="UserStore-config-encryption-tests" preserve-order="true" parallel="false" group-by-instances="true">
         <classes>
             <!--TODO uncomment after kernel 4.4.23 and carbon-identity-framework 5.11.51 upgrade-->
-            <!--<class name="org.wso2.identity.integration.test.user.store.config.UserStorePasswordEncryption"/>-->
+            <class name="org.wso2.identity.integration.test.user.store.config.UserStorePasswordEncryption"/>
+        </classes>
+    </test>
+    <test name="is-tests-oauth2-encryption" preserve-order="true" parallel="false">
+        <classes>
+            <class name="org.wso2.identity.integration.test.oauth2.Oauth2PersistenceProcessorInsertTokenTestCase"/>
+            <class name="org.wso2.identity.integration.test.oauth2.Oauth2HashAlgorithmTestCase"/>
         </classes>
     </test>
 
@@ -207,10 +213,5 @@
             <class name="org.wso2.identity.integration.test.user.profile.mgt.UserProfileAdminTestCase"/>
         </classes>
     </test>
-    <test name="is-tests-oauth2-encryption" preserve-order="true" parallel="false">
-        <classes>
-            <class name="org.wso2.identity.integration.test.oauth2.Oauth2PersistenceProcessorInsertTokenTestCase"/>
-            <class name="org.wso2.identity.integration.test.oauth2.Oauth2HashAlgorithmTestCase"/>
-        </classes>
-    </test>
+
 </suite>
